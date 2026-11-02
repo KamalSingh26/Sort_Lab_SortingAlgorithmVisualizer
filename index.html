@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Enter numbers and compare Bubble, Selection, Insertion, Merge, and Quick Sort on your array.">
+  <title>Sort Lab — Sort & Compare</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <a class="brand" href="./" aria-label="Sort Lab home"><span class="brand-icon" aria-hidden="true"><i></i><i></i><i></i></span>SORT LAB<span class="dot">.</span></a>
+      <span class="project-tag">SORTING ALGORITHM MINI PROJECT</span>
+    </header>
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <span class="eyebrow">YOUR NUMBERS. FIVE WAYS TO SORT.</span>
+        <h1 id="page-title">Sort your array.<br><em>Find the better fit.</em></h1>
+        <p>Enter a list of numbers and choose an algorithm. Get the sorted array and see which sort uses the fewest counted operations for your input.</p>
+      </section>
+
+      <section class="input-card" aria-labelledby="input-title">
+        <div class="card-heading"><h2 id="input-title"><span class="step-number">01</span> Enter your array</h2><span class="small-tag">ASCENDING ORDER</span></div>
+        <form id="sort-form" novalidate>
+          <label for="numbers">Numbers to sort</label>
+          <textarea id="numbers" rows="2" placeholder="Example: 8, 3, 5, 1, 9, 2" aria-describedby="input-help input-error" spellcheck="false"></textarea>
+          <p class="help" id="input-help">Separate numbers with commas or spaces. Use 1–50 values between −1 billion and 1 billion; negatives and decimals work too.</p>
+          <p class="error" id="input-error" role="alert" hidden></p>
+          <div class="examples" aria-label="Example arrays"><span>TRY AN EXAMPLE</span><button type="button" data-example="mixed">Mixed</button><button type="button" data-example="nearly">Nearly sorted</button><button type="button" data-example="reverse">Reverse order</button></div>
+          <div class="form-bottom">
+            <div class="algorithm-field"><label for="algorithm">Sorting algorithm</label><select id="algorithm"><option value="bubble">Bubble Sort</option><option value="selection">Selection Sort</option><option value="insertion">Insertion Sort</option><option value="merge">Merge Sort</option><option value="quick">Quick Sort</option></select></div>
+            <div class="actions"><button class="primary" type="submit">Sort & compare <span aria-hidden="true">→</span></button><button class="clear" id="clear" type="button">Clear</button></div>
+          </div>
+        </form>
+      </section>
+
+      <p class="empty-note" id="empty-note" role="status" aria-live="polite">Your results will appear here after you sort an array.</p>
+      <section id="results" aria-label="Sorting results" hidden>
+        <div class="result-heading"><h2><span class="step-number">02</span> Your sorted result</h2><span class="done" id="result-count"></span></div>
+        <div class="output-card">
+          <div class="array-row"><span class="array-label">YOUR INPUT</span><p class="array-value" id="original-array"></p></div>
+          <div class="array-row sorted-row"><span class="array-label">SORTED ARRAY</span><p class="array-value" id="sorted-array"></p></div>
+          <div class="output-meta"><span>Sorted with <strong id="selected-name"></strong></span><span id="selected-stats"></span></div>
+        </div>
+        <div class="recommendation" role="status" aria-live="polite">
+          <span class="recommendation-icon" aria-hidden="true">✓</span>
+          <div><span class="eyebrow">BEST FOR THIS INPUT · BY COUNTED WORK</span><h3 id="recommendation-title"></h3><p id="recommendation-reason"></p></div>
+        </div>
+        <div class="comparison-heading"><h2>Compare all five algorithms</h2><span>Same input. Separate array copies.</span></div>
+        <div class="table-wrap">
+          <table>
+            <caption class="sr-only">Comparison of sorting work on your input array</caption>
+            <thead><tr><th scope="col">Algorithm</th><th scope="col">Comparisons</th><th scope="col">Array writes</th><th scope="col">Total operations</th></tr></thead>
+            <tbody id="comparison-body"></tbody>
+          </table>
+        </div>
+        <p class="metric-note">Total operations = value comparisons + array writes, with equal weight. A swap counts as two array writes. Merge Sort includes writes to its temporary buffer. The lowest total wins; ties are shown. This compares these five implementations and does not measure elapsed time.</p>
+      </section>
+      <section class="how-it-works" aria-labelledby="how-title">
+        <div><span class="eyebrow">KEEPING IT SIMPLE</span><h2 id="how-title">What happens when you sort?</h2></div>
+        <ol><li><strong>Read your input</strong><span>Check the numbers and save them in an array.</span></li><li><strong>Sort & compare</strong><span>Run all five algorithms on copies of that same array.</span></li><li><strong>Show the result</strong><span>Display your chosen sort’s output and the lowest operation count.</span></li></ol>
+      </section>
+    </main>
+    <footer><span>Sort Lab · Sort & Compare</span><span>HTML + CSS + JavaScript · No external libraries</span></footer>
+  </div>
+</body>
+</html>

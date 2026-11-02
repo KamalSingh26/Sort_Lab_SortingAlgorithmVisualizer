@@ -1,0 +1,25 @@
+SORT LAB — SORT YOUR INPUT AND COMPARE ALGORITHMS
+
+1. Extract the ZIP using Extract All.
+2. Open the Sorting_Algorithm_Visualizer folder.
+3. Double-click index.html in Chrome, Edge, or Firefox.
+4. Enter numbers, for example: 4, 3, 2, 1
+5. Choose Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, or Quick Sort.
+6. Click Sort & compare.
+
+You will see your input, the sorted array from your chosen algorithm,
+a comparison table for all five sorts, and the best under the scoring rule.
+
+Total operations = comparisons + array writes.
+The lowest total wins, and ties are shown.
+Merge Sort counts temporary-buffer writes as well as result-array writes.
+This does not measure real execution time.
+
+Input: 1–50 numbers, separated by commas, spaces, or newlines.
+Negatives, decimals, zero, and duplicates work.
+Number range: -1,000,000,000 to 1,000,000,000.
+
+No installation, internet, server, or database is needed.
+Keep index.html, style.css, and script.js together.
+README.md explains the code and scoring rule.
+PROJECT_NOTES.md contains project notes and 25 viva answers.
